@@ -206,8 +206,6 @@ if __name__ == "__main__":
     #should only contain new games that have not been entered into the database so we don't get duplicates
     message = """ """.join(messageArray)
 
-
-    logging.info(message)
-
-
-    send_message(PHONENUMBER,'tmobile', message)
+    if message != '':
+        logging.info(message)
+        send_message(PHONENUMBER,'tmobile', message)
